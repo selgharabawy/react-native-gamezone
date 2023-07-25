@@ -37,8 +37,8 @@ const RootDrawerNavigator = ({navigation}) => {
                 headerTitle: '', // Remove the title from the header
             }}
         >
-            <Drawer.Screen name="Home" component={HomeStack} />
-            <Drawer.Screen name="About" component={AboutStack} />
+            <Drawer.Screen name="HomeStack" component={HomeStack} />
+            <Drawer.Screen name="AboutStack" component={AboutStack} />
         </Drawer.Navigator>
         </NavigationContainer>
   );
