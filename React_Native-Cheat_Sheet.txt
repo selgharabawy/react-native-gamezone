@@ -1,0 +1,91 @@
+install node js
+then,
+
+npm install -g expo-cli
+
+expo init docspert_mobile_app
+cd docspert_mobile_app
+npm start
+expo start -c
+
+download expo go
+
+expo init todo_mobile_app
+
+npx create-expo-app --template blank gamezone
+
+start development server:
+npx expo
+npx expo --help
+npx expo start --clear
+
+
+npm install expo-font expo
+npm i expo-app-loading
+
+Stack Navigation:
+npm i react-navigation
+expo install react-native-gesture-handler react-native-reanimated
+npm i react-navigation-stack
+
+Drawer Navcigation:
+npm i react-navigation-drawer
+
+
+In React Navigation, the createStackNavigator function allows you to create a stack navigator for managing navigation between screens. When using createStackNavigator, you can pass an optional defaultNavigationOptions object as the second parameter to customize the default options for all screens in the stack.
+
+The defaultNavigationOptions object allows you to set default configuration options that will be applied to all screens in the stack. Here are some commonly used options:
+
+headerStyle: Allows you to customize the style of the header.
+headerTitleStyle: Sets the style for the title text displayed in the header.
+headerTintColor: Specifies the color of the back button and title text in the header.
+headerTitleAlign: Aligns the title text in the header. It can be set to 'center', 'left', or 'right'.
+headerBackTitleVisible: Determines whether to show the back button title in the header.
+headerBackTitleStyle: Sets the style for the back button title in the header.
+Here's an example of using defaultNavigationOptions in createStackNavigator:
+
+javascript
+Copy code
+import { createStackNavigator } from 'react-navigation-stack';
+
+const AppNavigator = createStackNavigator(
+  {
+    Home: HomeScreen,
+    Profile: ProfileScreen,
+    Settings: SettingsScreen,
+  },
+  {
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: 'blue',
+      },
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+      headerTintColor: 'white',
+      headerTitleAlign: 'center',
+    },
+  }
+);
+In this example, all screens in the stack will have a blue header background, bold header title text, white back button and title text color, and centered title alignment.
+
+You can customize these options as per your app's design requirements.
+
+
+Yes, there are additional options available for defaultNavigationOptions in createStackNavigator. Here are some more commonly used options:
+
+headerBackImage: Sets a custom image for the back button in the header.
+headerRight: Renders a custom component in the header's right area.
+headerLeft: Renders a custom component in the header's left area.
+headerTitle: Renders a custom component as the header title.
+headerTransparent: Makes the header transparent, allowing the content to be visible behind it.
+headerShown: Controls the visibility of the header. Set it to false to hide the header for all screens.
+headerStatusBarHeight: Overrides the default status bar height.
+headerBackground: Renders a custom component as the background of the header.
+headerTintColor: Specifies the color of the header components (title, back button, etc.) separately from headerTintColor at the stack level.
+headerTitleContainerStyle: Specifies additional styles to be applied to the header title container.
+headerLeftContainerStyle: Specifies additional styles to be applied to the header left component container.
+headerRightContainerStyle: Specifies additional styles to be applied to the header right component container.
+These options provide further flexibility in customizing the header appearance and behavior for your stack navigator. You can use them to create a unique and tailored navigation experience for your app.
+
+
